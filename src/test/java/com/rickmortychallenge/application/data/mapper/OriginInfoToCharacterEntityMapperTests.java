@@ -55,7 +55,6 @@ public class OriginInfoToCharacterEntityMapperTests {
         assertEquals(DATA_LOCATION_DIMENSION, originInfo.dimension);
         assertEquals(residents, originInfo.residents);
         assertEquals(DATA_LOCATION_URL, originInfo.url);
-        // assertEquals(DATA_CHARACTER_INFO_NAME, characterInfo.name);
     }
 
     @Test

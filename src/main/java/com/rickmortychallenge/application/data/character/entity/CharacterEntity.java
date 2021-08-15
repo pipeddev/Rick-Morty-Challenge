@@ -20,7 +20,7 @@ public class CharacterEntity {
     @JsonProperty
     public OriginEntity origin;
     @JsonProperty
-    public LocationEntity location;
+    public LocationCharacterEntity location;
     @JsonProperty
     public String image;
     @JsonProperty
@@ -29,6 +29,4 @@ public class CharacterEntity {
     public String url;
     @JsonProperty
     public String created;
-    @JsonProperty
-    public List<ErrorEntity> error;
 }

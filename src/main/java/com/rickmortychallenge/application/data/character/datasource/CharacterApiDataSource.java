@@ -6,9 +6,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestOperations;
 import org.springframework.web.server.ResponseStatusException;
-import org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod;
-
-import javax.xml.ws.http.HTTPException;
 
 public class CharacterApiDataSource implements CharacterDataSource{
     private final CharacterProperties characterProperties;

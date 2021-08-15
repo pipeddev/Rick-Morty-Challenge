@@ -1,7 +1,7 @@
 package com.rickmortychallenge.application.data.mapper;
 
 import com.rickmortychallenge.application.data.character.entity.CharacterEntity;
-import com.rickmortychallenge.application.data.character.entity.LocationEntity;
+import com.rickmortychallenge.application.data.character.entity.LocationCharacterEntity;
 import com.rickmortychallenge.application.data.character.entity.OriginEntity;
 import com.rickmortychallenge.application.data.character.mapper.CharacterInfoToCharacterEntityMapper;
 import com.rickmortychallenge.application.domain.model.CharacterInfo;
@@ -22,7 +22,7 @@ public class CharacterInfoToCharacterEntityMapperTests {
     private Mapper<CharacterInfo, CharacterEntity> characterInfoToCharacterEntityMapper;
     private CharacterInfo characterInfo;
     private CharacterEntity characterEntity;
-    private LocationEntity location;
+    private LocationCharacterEntity location;
     private OriginEntity origin;
 
     private final String DATA_CHARACTER_INFO_NAME = "Ricky";
@@ -63,7 +63,7 @@ public class CharacterInfoToCharacterEntityMapperTests {
         origin.name = DATA_ORIGIN_NAME;
         origin.url = DATA_ORIGIN_URL;
 
-        location = new LocationEntity();
+        location = new LocationCharacterEntity();
         location.name = DATA_LOCATION_NAME;
         location.url = DATA_LOCATION_URL;
 
