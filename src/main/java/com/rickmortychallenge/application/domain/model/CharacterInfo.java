@@ -15,4 +15,6 @@ public class CharacterInfo {
     public String type;
     @JsonProperty
     public int episode_count;
+    @JsonProperty
+    public OriginInfo origin;
 }

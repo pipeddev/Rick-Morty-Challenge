@@ -29,4 +29,6 @@ public class CharacterEntity {
     public String url;
     @JsonProperty
     public String created;
+    @JsonProperty
+    public List<ErrorEntity> error;
 }

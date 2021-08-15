@@ -2,7 +2,13 @@ package com.rickmortychallenge.application.data.character.datasource;
 
 import com.rickmortychallenge.application.data.character.entity.CharacterEntity;
 import com.rickmortychallenge.configuration.character.CharacterProperties;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestOperations;
+import org.springframework.web.server.ResponseStatusException;
+import org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod;
+
+import javax.xml.ws.http.HTTPException;
 
 public class CharacterApiDataSource implements CharacterDataSource{
     private final CharacterProperties characterProperties;
@@ -15,6 +21,13 @@ public class CharacterApiDataSource implements CharacterDataSource{
 
     @Override
     public CharacterEntity getCharacter(String code) {
-        return restOperations.getForObject(characterProperties.getCharacterURL(code), CharacterEntity.class);
+        try {
+            System.out.println(characterProperties.getCharacterURL(code));
+            return restOperations.getForObject(characterProperties.getCharacterURL(code), CharacterEntity.class);
+        }catch (HttpClientErrorException ex){
+            System.out.println(ex.getResponseBodyAsString());
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, ex.getResponseBodyAsString());
+        }
+
     }
 }

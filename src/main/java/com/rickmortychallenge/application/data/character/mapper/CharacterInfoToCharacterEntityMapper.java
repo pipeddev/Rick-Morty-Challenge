@@ -13,11 +13,10 @@ public class CharacterInfoToCharacterEntityMapper extends Mapper<CharacterInfo, 
         CharacterInfo characterInfo = new CharacterInfo();
         characterInfo.id = value.id;
         characterInfo.name = value.name;
-        //characterInfo.gender = value.gender;
         characterInfo.status = value.status;
         characterInfo.species = value.species;
         characterInfo.type = value.type;
-        characterInfo.episode_count = value.episode.size();
+        characterInfo.episode_count = value.episode == null ? 0 : value.episode.size();
         return characterInfo;
     }
 }
