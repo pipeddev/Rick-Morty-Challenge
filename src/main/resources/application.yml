@@ -3,5 +3,11 @@ api:
   paths:
     character: "character/{characterId}"
     characters: "character"
-    location: "location/{locationId}"
+    location: "location/{characterId}"
     locations: "location"
+server:
+  error:
+  include-message: always
+  include-binding-errors: always
+  include-stacktrace: on_trace_param
+  include-exception: false
