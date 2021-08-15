@@ -4,7 +4,7 @@ import com.rickmortychallenge.application.data.character.datasource.CharacterApi
 import com.rickmortychallenge.application.data.character.datasource.CharacterDataSource;
 import com.rickmortychallenge.application.data.character.entity.CharacterEntity;
 import com.rickmortychallenge.application.data.character.entity.OriginEntity;
-import com.rickmortychallenge.application.data.character.entity.LocationEntity;
+import com.rickmortychallenge.application.data.character.entity.LocationCharacterEntity;
 import com.rickmortychallenge.configuration.character.CharacterProperties;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
@@ -50,7 +50,7 @@ public class CharacterApiDataSourceTests {
     private CharacterApiDataSource characterApiDatasource;
     private CharacterEntity characterEntity;
     private List<String> episode;
-    private LocationEntity location;
+    private LocationCharacterEntity location;
     private OriginEntity origin;
 
     @Mock
@@ -72,7 +72,7 @@ public class CharacterApiDataSourceTests {
         origin.name = DATA_ORIGIN_NAME;
         origin.url = DATA_ORIGIN_URL;
 
-        location = new LocationEntity();
+        location = new LocationCharacterEntity();
         location.name = DATA_LOCATION_NAME;
         location.url = DATA_LOCATION_URL;
 

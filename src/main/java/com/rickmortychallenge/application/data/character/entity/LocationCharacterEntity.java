@@ -2,7 +2,9 @@ package com.rickmortychallenge.application.data.character.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class ErrorEntity {
+public class LocationCharacterEntity {
     @JsonProperty
-    public String error;
+    public String name;
+    @JsonProperty
+    public String url;
 }
